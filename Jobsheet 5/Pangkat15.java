@@ -6,12 +6,11 @@ public class Pangkat15 {
         pangkat = p;
     }
 
-    int pangkatBF(int a, int n){
+    int pangkatBF() {
         int hasil = 1;
-        for (int i = 0; i < n; i++) {
-            hasil = hasil * nilai;
+        for (int i = 0; i < pangkat; i++) { // Gunakan atribut `pangkat`
+            hasil *= nilai; // Gunakan atribut `nilai`
         }
-
         return hasil;
     }
 
