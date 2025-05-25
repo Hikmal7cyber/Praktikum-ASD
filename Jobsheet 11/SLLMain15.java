@@ -26,62 +26,74 @@ public class SLLMain15 {
         sll.insertAt(2, mhs2);
         sll.print();
 
-        while (true) {
-            System.out.print("Tambah data baru? (y/n): ");
-            String jawab = sc15.nextLine();
+        // while (true) {
+            //System.out.print("Tambah data baru? (y/n): ");
+            //String jawab = sc15.nextLine();
 
-            if (jawab.equalsIgnoreCase("y")) {
-                System.out.println("----- INPUT DATA -----");
-                System.out.print("Masukkan nama: ");
-                String nama = sc15.nextLine();
-                System.out.print("Masukkan NIM: ");
-                String nim = sc15.nextLine();
-                System.out.print("Masukkan kelas: ");
-                String kelas = sc15.nextLine();
-                System.out.print("Masukkan IPK: ");
-                double ipk = sc15.nextDouble();
-                Mahasiswa15 mhs = new Mahasiswa15(nim, nama, kelas, ipk);
+            //if (jawab.equalsIgnoreCase("y")) {
+                //System.out.println("----- INPUT DATA -----");
+                //System.out.print("Masukkan nama: ");
+                //String nama = sc15.nextLine();
+                //System.out.print("Masukkan NIM: ");
+                //String nim = sc15.nextLine();
+                //System.out.print("Masukkan kelas: ");
+                //String kelas = sc15.nextLine();
+                //System.out.print("Masukkan IPK: ");
+                //double ipk = sc15.nextDouble();
+                //Mahasiswa15 mhs = new Mahasiswa15(nim, nama, kelas, ipk);
 
-                System.out.println();
+                //System.out.println();
 
-                System.out.println("Silahkan pilih menu: ");
-                System.out.println("1. Menambahkan data Diawal");
-                System.out.println("2. Menambahkan data Setelah Nama Tertentu");
-                System.out.println("3. Menambahkan data di index tertentu");
-                System.out.println("4. Menambahkan data di Akhir");
-                System.out.print("Pilihan : ");
-                int pilih = sc15.nextInt();
-                sc15.nextLine();
-                switch (pilih) {
-                case 1:
-                    sll.addFirst(mhs);
-                    sll.print();
-                    break;
-                case 2:
-                    System.out.print("Input data setelah: ");
-                    String dicari = sc15.nextLine();
-                    sll.insertAfter(dicari, mhs);
-                    sll.print();
-                    break;
-                case 3: 
-                    System.out.print("Posisi index yang diinginkan: ");
-                    int index = sc15.nextInt();
-                    sc15.nextLine();
-                    sll.insertAt(index, mhs);
-                    sll.print();
-                    break;
-                    case 4:
-                    sll.addLast(mhs);
-                    sll.print();
-                    break;
-                 default:
-                    break;
-                }
-            } else if(jawab.equalsIgnoreCase("n")) {
-                break;
-            } else {
-                System.out.println("Tidak Valid, jawab dengan Y/N");
-            }
-        }
+                //System.out.println("Silahkan pilih menu: ");
+                //System.out.println("1. Menambahkan data Diawal");
+                //System.out.println("2. Menambahkan data Setelah Nama Tertentu");
+                //System.out.println("3. Menambahkan data di index tertentu");
+                //System.out.println("4. Menambahkan data di Akhir");
+                //System.out.print("Pilihan : ");
+                //int pilih = sc15.nextInt();
+                //sc15.nextLine();
+                //switch (pilih) {
+                //case 1:
+                    //sll.addFirst(mhs);
+                    //sll.print();
+                    //break;
+                //case 2:
+                    //System.out.print("Input data setelah: ");
+                    //String dicari = sc15.nextLine();
+                    //sll.insertAfter(dicari, mhs);
+                    //sll.print();
+                    //break;
+                //case 3: 
+                    //System.out.print("Posisi index yang diinginkan: ");
+                    //int index = sc15.nextInt();
+                    //sc15.nextLine();
+                    //sll.insertAt(index, mhs);
+                    //sll.print();
+                    //break;
+                    //case 4:
+                    //sll.addLast(mhs);
+                    //sll.print();
+                    //break;
+                 //default:
+                    //break;
+                //}
+            //} else if(jawab.equalsIgnoreCase("n")) {
+                //break;
+            //} else {
+                //System.out.println("Tidak Valid, jawab dengan Y/N");
+            //}
+        //}
+
+        System.out.println("Data index 1: ");
+        sll.getData(1);
+
+        System.out.println("Data mahasiswa Bimon berada pada index: " + sll.indexOf("Bimon"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
     }
 }
